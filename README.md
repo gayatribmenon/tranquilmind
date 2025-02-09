@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/5a622d3c-4836-4bdb-8053-b845cb691993)# [Project Name] 🎯
+![image](https://github.com/user-attachments/assets/5a622d3c-4836-4bdb-8053-b845cb691993)
+# TRANQUIL MIND 🎯
 
 
 ## Basic Details
