@@ -1,65 +1,83 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: beige;
     margin: 0;
     padding: 0;
-    background-color: #b0e5ef; 
     text-align: center;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #10aee3;
+    background-color: #e7d894;
     padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav button {
-    background-color: #ffffff;
-    color: #007bff;
-    border: 2px solid #f5f5f6;
+    background-color: #e4c6a5;
+    border: none;
     padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 5px;
+    transition: 0.3s;
+    color:brown;
 }
 
 nav button:hover {
-    background-color: #0e3c63;
-    color: white;
+    background-color: #ddd;
 }
 
-/* Close Button Style */
-.close-btn {
-    background-color: rgb(8, 86, 126);
-    color: white;
-    border: none;
-}
-
-.close-btn:hover {
-    background-color: rgb(8, 53, 105);
-}
-
-/* Centered Description Box */
-.center-box {
-    width: 60%;
-    margin: 50px auto;
+/* Box Sections */
+.box {
+    background-color: rgb(202, 192, 179);
+    margin: 80px auto;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
+    color:chocolate;
 }
 
-.center-box h1 {
-    color: #007bff;
+/* Buttons */
+button {
+    background-color: #c8a379;
+    color: brown;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-.center-box p {
-    font-size: 18px;
+button:hover {
+    background-color: #ab8a44;
+}
+
+/* Breathing Timer */
+#breathing-timer {
+    font-size: 20px;
+    font-weight: bold;
     color: #333;
-    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .box {
+        width: 90%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
 }

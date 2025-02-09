@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,28 +10,64 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <button onclick="showContent('home')">Home</button>
-        <button onclick="showContent('sounds')">Sounds</button>
-        <button onclick="showContent('affirmations')">Affirmations</button>
-        <button onclick="showContent('breathing')">Breathing</button>
-        <button onclick="showContent('clicking')">Clicking</button>
-        <button class="close-btn" onclick="closeDescription()">Close</button>
-
-    
+        <button onclick="scrollToSection('home')">Home</button>
+        <button onclick="scrollToSection('sounds')">Sounds</button>
+        <button onclick="scrollToSection('affirmations')">Affirmations</button>
+        <button onclick="scrollToSection('breathing')">Breathing</button>
+        <button onclick="scrollToSection('clicking')">Clicking</button>
     </nav>
 
-    <!-- Centered Description Box -->
-    <div class="center-box" id="descriptionBox">
+    <!-- Home Section -->
+    <div id="home" class="box">
         <h1>TRANQUIL MIND</h1>
-        <p>Welcome to your personal chill zone! This is a peaceful digital sanctuary designed to help you unwind, relax, and shake off stress. Whether you're in the mood for soothing music, guided meditations, calming visuals, or interactive stress-relief activities, we’ve got you covered.
-
-            Need a little pick-me-up? Dive into nature sounds, breathing exercises, or lighthearted games to bring you instant calm and long-term emotional balance. Plus, with mood tracking, journaling, and a supportive community, you’ll always have a safe space to reset and recharge.
-            
-            Take a deep breath. You're in the right place.
-            
-            .</p>
+        <p>Welcome to your personal chill zone! This is a peaceful digital sanctuary designed to help you unwind, relax, and shake off stress. Whether you're in the mood for soothing music, guided meditations, calming visuals, or interactive stress-relief activities, we’ve got you covered. Need a little pick-me-up? Dive into nature sounds, breathing exercises, or lighthearted games to bring you instant calm and long-term emotional balance. Plus, with mood tracking, journaling, and a supportive community, you’ll always have a safe space to reset and recharge. Take a deep breath. You're in the right place. .</p>
     </div>
 
-    <script src="script.js"></script> <!-- Linking JavaScript -->
+    <!-- Sounds Section -->
+    <div id="sounds" class="box">
+        <h1>Soothing Sounds</h1>
+        <p>Click a button below to play a relaxing sound:</p>
+        <button onclick="playSound('sounds/birds.wav')">birds</button>
+        <button onclick="playSound('sounds/waves.wav')">Wave</button>
+        <button onclick="playSound('sounds/rain.wav')">Rain</button>
+    </div>
+
+    
+    <!-- Affirmations Section -->
+    <div id="affirmations" class="box">
+        <h1>Daily Affirmations</h1>
+
+        <p style="text-align: left;">
+            1. You don’t have to control your thoughts. You just have to stop letting them control you.<br>
+            2. I trust that everything is unfolding for my highest good.<br>
+            3. I have handled challenges before, and I will handle this too.<br>
+            4. Keep your face always toward the sunshine—and shadows will fall behind you.<br>
+            5. You can’t control the wind, but you can adjust your sails.<br>
+            6. I am doing my best, and that is enough.
+        </p>
+    </div>
+
+    <!-- Breathing Section -->
+    <div id="breathing" class="box">
+        <h1>Breathing timer</h1>
+        <button onclick="startBreathingExercise()">Start Breathing</button>
+        <p id="breathing-timer">Time Left: 10s</p> <!-- Timer Display -->
+    </div>
+
+    <!-- Clicking Section -->
+    <div id="clicking" class="box">
+        <h1>Interactive Clicking</h1>
+        <p>Click the button below to hear a satisfying clicking sound.</p>
+        <button onclick="playClickSound('click.wav')">Click Me!</button>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <script src="javascript.js"></script>
+
 </body>
 </html>
